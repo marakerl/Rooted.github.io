@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Earthy beige + natural green design system. All HSL. */
+@layer base {
+  :root {
+    --background: 40 38% 92%;            /* earthy beige #F1ECDC ~ */
+    --foreground: 90 18% 14%;            /* deep forest text */
+
+    --card: 40 35% 96%;                  /* lighter beige card */
+    --card-foreground: 90 18% 14%;
+
+    --popover: 40 35% 96%;
+    --popover-foreground: 90 18% 14%;
+
+    --primary: 95 40% 38%;               /* fresh natural green */
+    --primary-foreground: 40 38% 96%;
+    --primary-glow: 95 50% 55%;
+
+    --secondary: 35 28% 80%;             /* warm clay */
+    --secondary-foreground: 90 22% 18%;
+
+    --muted: 38 25% 86%;
+    --muted-foreground: 90 10% 38%;
+
+    --accent: 80 35% 60%;                /* muted olive */
+    --accent-foreground: 90 22% 14%;
+
+    --destructive: 12 65% 48%;
+    --destructive-foreground: 40 38% 96%;
+
+    --border: 38 22% 78%;
+    --input: 38 22% 82%;
+    --ring: 95 40% 38%;
+
+    --radius: 0.85rem;
+
+    --gradient-leaf: linear-gradient(135deg, hsl(95 40% 38%), hsl(95 50% 55%));
+    --gradient-earth: linear-gradient(180deg, hsl(40 38% 94%), hsl(38 30% 88%));
+    --shadow-soft: 0 4px 20px -8px hsl(90 20% 20% / 0.18);
+    --shadow-leaf: 0 8px 30px -10px hsl(95 40% 30% / 0.35);
+
+    --sidebar-background: 40 35% 94%;
+    --sidebar-foreground: 90 18% 18%;
+    --sidebar-primary: 95 40% 38%;
+    --sidebar-primary-foreground: 40 38% 96%;
+    --sidebar-accent: 38 25% 86%;
+    --sidebar-accent-foreground: 90 18% 18%;
+    --sidebar-border: 38 22% 78%;
+    --sidebar-ring: 95 40% 38%;
+  }
+
+  .dark {
+    --background: 90 18% 10%;
+    --foreground: 40 30% 92%;
+    --card: 90 18% 13%;
+    --card-foreground: 40 30% 92%;
+    --popover: 90 18% 13%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 95 50% 55%;
+    --primary-foreground: 90 25% 10%;
+    --primary-glow: 95 55% 65%;
+    --secondary: 90 12% 22%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 90 12% 18%;
+    --muted-foreground: 40 15% 65%;
+    --accent: 80 30% 45%;
+    --accent-foreground: 40 30% 92%;
+    --destructive: 12 60% 45%;
+    --destructive-foreground: 40 30% 92%;
+    --border: 90 12% 22%;
+    --input: 90 12% 22%;
+    --ring: 95 50% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+    background-image: var(--gradient-earth);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', 'Nunito', serif;
+    letter-spacing: -0.01em;
+  }
+}
